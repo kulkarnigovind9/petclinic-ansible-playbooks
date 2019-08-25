@@ -1,9 +1,0 @@
----
-- hosts: appserver
-  tasks:
-    - name: copy docker-compose
-      copy: src=../docker-compose.yml dest=/home/ubuntu/app/ 
-      
-    - name: deploy docker-compose 
-      command: docker-compose up -d --force-recreate
-      

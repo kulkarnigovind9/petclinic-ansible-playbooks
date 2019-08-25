@@ -6,4 +6,7 @@
       
     - name: deploy docker-compose 
       command: docker-compose up -d --force-recreate
+      args:
+        chdir: /home/ubuntu/app/ 
+      
       
