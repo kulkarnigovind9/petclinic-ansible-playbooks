@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=petclinic
+      - MYSQL_DATABASE=petclinic
+    volumes:
+      - petclinic-datastore:/var/lib/mysql  
+
+  pet-clinic:
+    image:  kulkarnigovind/petclinic:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+volumes:
+  petclinic-datastore:
+
