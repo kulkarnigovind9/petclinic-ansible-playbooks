@@ -1,2 +1,2 @@
 [appserver]
-app01 ansible_host=172.20.20.108
+app01 ansible_host=172.20.20.250
